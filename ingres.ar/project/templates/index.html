@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title> Home prueba </title>
+</head>
+<body style="background-color: white" > 
+  <header class="container" style= "background-color: aqua" >
+    <h1><img src="../media/index/IngresarLogo.png" width="100" height="50"></h1>
+    <!--DESPLEGABLE INICIAR SESION-->
+    <button class="button" style="color:red" onclick="document.getElementById('id01').style.display='block'">Iniciar SESION--</button> 
+<!--PROBANDO FORMULARIO INICIO SESION
+    <div class="container margin-top">
+      <form class="container card">
+      <p>
+      <input class="input" type="text" style="width:90%" required>
+      <label>Usuario</label></p>
+      <p>
+      <input class="input" type="password" style="width:90%" required>
+      <label>Contraseña</label></p>
+      <p>
+      <input id="milk" class="check" type="checkbox" checked="checked">
+      <label>¿Permanecer Conectado?</label></p>
+      <p>
+      <button class="button section teal ripple"location.href='carga.html'> Iniciar Sesión </button></p>
+      </form>
+      </div>
+      --->  
+<div id="id01" class="panel" style="display:none">
+  <span onclick="this.parentElement.style.display='none'"
+  class="button container display-topright" style="background-color:rgb(185, 143, 185);">Cerrar</span>
+  </div>
+  </header>
+  <!--CARRUSEL-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../media/index/quienes-somos.jpg" class="d-block w-100" alt="Imagen 1" width="100" height="300">
+          </div>
+          <div class="carousel-item">
+            <img src="../media/index/cuarentena.jfif" class="d-block w-100" alt=".Imagen 2" width="100" height="300">
+          </div>
+          <div class="carousel-item">
+            <img src="../media/index/estudiar.jpg" class="d-block w-100" alt="Imagen 3" width="100" height="300">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+      <div class="container">
+<!--BOTONES-->          
+        <div class="card" style="width:50%">
+          <img src="../media/index/bibliotecagif.gif" alt="Alps" style="width:50%">
+          <div class="container center">
+          </div>
+        </div>
+      </div>
+</body> 
+</html>
