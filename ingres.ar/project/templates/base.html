@@ -1,8 +1,7 @@
-
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <!-- Cargamos archivos static con % load static % -->
 {% load static %}
+
 
 <html lang="en">
 <head>
@@ -12,12 +11,13 @@
     <link rel="stylesheet" href="{% static 'home/home.css' %}">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title> Home prueba </title>
+    {% block head %}{% endblock %}
 </head>
+
 <body> 
 <div class="contenedor-main" style="height: 100%;">   
     <header class="navbar navbar-expand-lg fixed-top my-nav justify-content-between align-items-center">   
-           <a class="navbar-brand h-10" href="http://127.0.0.1:8000/"> 
+           <a class="navbar-brand h-10" href="http://127.0.0.1:8000/"> <!-- Retorna al home con el icono de IngresAR -->
                 <img class="icono_1" src="{% static 'biblioteca/icons/logo1.svg' %}" alt="error_img">
            </a>
 
@@ -58,19 +58,22 @@
                </li>
             </ul>  
     </header> 
+</div> 
 
-    <footer class="footer-cont fixed-bottom ">
-        <span>
-            Contactanos
-        </span>
-        <div class="social-media">
-            <img class="iconos" src="{% static 'biblioteca/icons/facebook.png' %}" alt="">
-            <img class="iconos" src="{% static 'biblioteca/icons/gorjeo.png' %}" alt="">
-            <img class="iconos" src="{% static 'biblioteca/icons/instagram.png' %}" alt="">
-        </div>
-    </footer>
-
+<div class = 'container' style="font-size: small;">
+    {% block body %}{% endblock %}
 </div>  
+
+<footer class="footer-cont fixed-bottom ">
+    <span>
+        Contactanos
+    </span>
+    <div class="social-media">
+        <img class="iconos" src="{% static 'biblioteca/icons/facebook.png' %}" alt="">
+        <img class="iconos" src="{% static 'biblioteca/icons/gorjeo.png' %}" alt="">
+        <img class="iconos" src="{% static 'biblioteca/icons/instagram.png' %}" alt="">
+    </div>
+</footer>
 
 
 <!-- JS, Popper.js, and jQuery -->
