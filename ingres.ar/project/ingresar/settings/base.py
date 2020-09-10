@@ -38,12 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'apps.gestion_establecimientos',
-=======
     #apps propias
     'apps.usuarios',
->>>>>>> 151a6697af995d9b445460697971f14f15512b4f
 ]
 
 MIDDLEWARE = [
