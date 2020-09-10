@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.gestion_establecimientos',
+    #apps propias
+    'apps.usuarios',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +79,7 @@ WSGI_APPLICATION = 'ingresar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.path.join(os.path.dirname(BASE_DIR), 'db.sqlite3'),
     }
 }
@@ -107,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'UTC-3'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
 
