@@ -9,11 +9,9 @@ from django.contrib.auth.models import User
 class Perfil(models.Model):
     '''usuario es la relacion entre la table Users y Perfil'''
     usuario = models.OneToOneField(User,on_delete= models.CASCADE)
-    nombre = models.CharField(max_length=30,blank=True)
-    apellido = models.CharField(max_length=20,blank=True)
     telefono = models.CharField(max_length=20,blank=True)
     fecha_nacimiento= models.DateField(null=True)
-    foto = models.ImageField(upload_to='../media',blank=True)
+    foto = models.ImageField(upload_to='media/',blank=True)
     creado = models.DateTimeField(auto_now_add=True)
     modificado = models.DateTimeField(auto_now=True)
 
