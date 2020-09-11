@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body{
+   margin:0px;
+   height:100%;
+}
+
+body {
+   background-color: white;   
+   min-height: 100vh;
+}
+
+.my-nav{
+    background: linear-gradient(to bottom,#C1F1F5, #2CA4AF);
+    min-height: 4rem;
+}     
+
+.my-col {
+
+   height: 100%; 
+   width: 300px;
+   position: relative;
+   display: inline-block;
+   text-align: center;
+   /* cursor: pointer; */
+}
+
+.my-container {
+
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.footer-cont {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #86A841 ,#B963F2 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* .centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    
+} */
+
+.centrado {
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+}
+
+.imagen_1 {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    
+}
+
+.icono_1 {
+    height: 50px;
+}
+
+.boton_registro , .boton_cs_set{
+    margin-left: 20px;
+}
+
+.boton_registro button a{
+    color: white;
+}
+
+.boton_cerrarsesion button a{
+    color: white;
+}
+
+form.form_1 {
+    padding: 20px;
+    width: 250px;
+}
+
+.lista_1 {
+    margin-right: 50px;
+}
+
+button.boton_reg_set ,button.boton_ing_set  , button.boton_cs_set{
+    border-radius: 0 10px 0 10px;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.footer-cont span {
+    color: white;
+}
+
+/* #C1F1F5 */
+/* #2CA4AF */
+/* #B963F2 */
+/* #86A841 */
+
+
+
+
+
+
+
+

@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body{
+   margin:0px;
+   height:100%;
+}
+
+body {
+   background-color: white;   
+   min-height: 100vh;
+}
+
+.my-nav{
+    background: linear-gradient(to bottom,#C1F1F5, #2CA4AF);
+    min-height: 4rem;
+}     
+
+.my-col {
+
+   height: 100%; 
+   width: 300px;
+   position: relative;
+   display: inline-block;
+   text-align: center;
+   /* cursor: pointer; */
+}
+
+.my-container {
+
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.footer-cont {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #86A841 ,#B963F2 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* .centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    
+} */
+
+.centrado {
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+}
+
+.imagen_1 {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    
+}
+
+.icono_1 {
+    height: 50px;
+}
+
+.boton_registro , .boton_cs_set{
+    margin-left: 20px;
+}
+
+.boton_registro button a{
+    color: white;
+}
+
+.boton_cerrarsesion button a{
+    color: white;
+}
+
+form.form_1 {
+    padding: 20px;
+    width: 250px;
+}
+
+.lista_1 {
+    margin-right: 50px;
+}
+
+button.boton_reg_set ,button.boton_ing_set  , button.boton_cs_set{
+    border-radius: 0 10px 0 10px;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.footer-cont span {
+    color: white;
+}
+/*Estilos de la pantalla Registro de Maribel Aguilar*/
+.logo {
+    width: 100px;
+    height:60px;
+}
+
+.menu {
+    float:right;
+    display:flex;
+    padding: 5px;
+    border: 2px;
+    color:#707070;
+}
+.menu a{
+    margin-left:10px;
+    background:#CED6D6;
+    padding:4px 35px;
+    font-family: "Helvetica Neue";
+    text-align: center;
+    font-size:15px;
+    border: 1px solid #FCFCFC;
+    box-shadow: 0 8px 6px rgba(43,39,39,0.24);
+    border-radius: 0 20px 0 20px;
+}
+.barra-superior {
+    background: rgb(243,242,250);
+    background: linear-gradient(180deg, rgba(243,242,250,1) 0%, rgba(106,175,180,1) 55%, rgba(21,151,177,1) 100%);
+    padding: 10px;
+    border: 2px;
+}
+
+.caja-registro {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin: 100px auto;
+    width: 200px;
+    background:#B4D6D9;
+    padding: 50px;
+    border: 2px;
+
+}
+
+.caja-registro input {
+    display: block;
+    margin-bottom: 20px;
+    text-align:center;
+}
+.caja-registro input[type="submit"] {
+    font-family: "Helvetica Neue";
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.barra-inferior{
+    display: flex;
+    justify-content: center;
+    padding:6px;
+    border:2px;
+    background: rgb(134,168,65);
+    background: linear-gradient(90deg, rgba(134,168,65,1) 24%, rgba(185,99,242,1) 134%);
+    color:white;
+}
+
+.iconos{
+
+    width: 50px;
+    height:20px;
+}
+/* #C1F1F5 */
+/* #2CA4AF */
+/* #B963F2 */
+/* #86A841 */
+
+
+
+
+
+
+
+
+
+
