@@ -85,11 +85,11 @@ DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ingresar',
-        'USER': 'Admin',
+        'USER': 'postgres',
         'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '5432',
-   } """
+} """
 
 DATABASES = {
     'default': {
@@ -138,3 +138,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR), 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+
+print(MEDIA_ROOT)

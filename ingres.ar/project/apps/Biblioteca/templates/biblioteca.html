@@ -7,26 +7,32 @@
 {% block content %}
 <div class="container"> 
     <form>
-       <div class="form-group">
-         <label class="label-biblio">Contenido de Biblioteca</label>
-       </div>
-       <div class="form-group">
+    <div class="form-group">
+        <label class="label-biblio">Contenido de Biblioteca</label>
+    </div>
+    <div class="form-group">
             <label for="">Materiales de Estudio: </label>
             <div class="contenedor-material"> 
+<<<<<<< HEAD
                 <a class="link-material" href="{{ MEDIA_ROOT }}/studymaterial/Programa_lengua.pdf" download="Programa_lengua.pdf"> Programa de Lengua</a>
+=======
+                <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1ZvzsDVcey3rrcW8K_huvYqrv1vfN70F0/view?usp=sharing" download="Programa_lengua.pdf">Programa de Lengua</a>
+>>>>>>> c24e46d5625ea80b206d9660e7ac65a4b1f0022d
             </div>
             <div class="contenedor-material"> 
-                <a class="link-material" href="#">Material de estudio 2</a>
+                <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1hU20rjLJdW81n381ZISIB0R2mt_6ezz7/view?usp=sharing" download="Programa_matematicas.pdf">Programa de Matematicas</a>
             </div>
             <div class="contenedor-material"> 
-                <a class="link-material" href="#">Material de estudio 3</a>
+                <a class="link-material" target="_blank" href="https://drive.google.com/file/d/13iAUBT9N5MDvAOiVUxmSMRE6zspdYAJb/view?usp=sharing">Material Literario para la autoevaluación de Lengua</a>
             </div>
-            <div class="contenedor-material"> 
+            <!-- Caja para Material extra.
+                <div class="contenedor-material"> 
                 <a class="link-material" href="#">Material de estudio 4</a>
             </div>
-       </div>
+            -->
+    </div>
 
-       <div class="form-group">
+<!--       <div class="form-group">
             <label for="">Materias:</label>
             <div class="contenedor-material"> 
                 <a class="link-material" href="#">Materia 1</a>
@@ -40,8 +46,8 @@
             <div class="contenedor-material"> 
                 <a class="link-material" href="#">Materia 4</a>
             </div>
-       </div>
-
-   </form>
+    </div>
+    -->
+    </form>
 </div>
 {% endblock %}

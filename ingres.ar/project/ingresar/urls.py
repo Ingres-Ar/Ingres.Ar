@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+<<<<<<< HEAD
+=======
+
+>>>>>>> c24e46d5625ea80b206d9660e7ac65a4b1f0022d
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +31,8 @@ urlpatterns = [
     path('establecimientos/', include('apps.Establecimientos.urls')),
     path('autoevaluacion/', include('apps.Autoevaluacion.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c24e46d5625ea80b206d9660e7ac65a4b1f0022d
