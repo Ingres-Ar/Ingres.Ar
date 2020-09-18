@@ -1,4 +1,4 @@
-/* estilos de biblioteca */
+/* estilos de home */
 
 form {
     width: 500px;
@@ -55,10 +55,9 @@ button.boton_reg_set ,button.boton_ing_set  , button.boton_cs_set{
     color: white;
 }
 
-
 .carousel {
-    width:85%;
-    height:85%;
+    width:  85%;
+    height: 85%;
     margin: auto;
 }
 
