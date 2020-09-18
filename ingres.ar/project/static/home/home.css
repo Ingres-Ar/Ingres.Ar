@@ -24,8 +24,6 @@ form {
     color: #4499A0;
 }
 
-<<<<<<< HEAD:ingres.ar/project/static/biblioteca/biblioteca.css
-=======
 .boton_registro button a{
     color: white;
 }
@@ -58,11 +56,11 @@ button.boton_reg_set ,button.boton_ing_set  , button.boton_cs_set{
 }
 
 
-
-
-
->>>>>>> 7ba203d298b36042236e62779ba35b5e30458104:project/static/home/home.css
-
+.carousel {
+    width:85%;
+    height:85%;
+    margin: auto;
+}
 
 
 
