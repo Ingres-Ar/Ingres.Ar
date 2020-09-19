@@ -32,14 +32,17 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Ingreso
                 </button>
-                <form class="dropdown-menu form_1">
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif%}
+                <form class="dropdown-menu form_1" action="{% url "login_usuario" %}" method="POST">
                     <div class="form-group">
-                        <label for="exampleDropdownFormEmail2">Direccion de Email</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@ejemplo.com">
+                        <label for="exampleDropdownFormEmail2">Usuario</label>
+                        <input type="text" class="form-control" name="username" id="exampleDropdownFormEmail2" placeholder="email@ejemplo.com">
                     </div>
                     <div class="form-group">
                         <label for="exampleDropdownFormPassword2">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
+                        <input type="password" name= "password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
                     </div>
                     <div class="form-group">
                         <div class="form-check">
@@ -49,12 +52,13 @@
                             </label>
                         </div>
                     </div>
+                    {% csrf_token %}
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
                 </form>
             </li>
             <li class="nav-item boton_registro">
                 <button class="btn btn-secondary boton_reg_set">
-                    <a href="http://127.0.0.1:8000/registro/">Registro</a>
+                    <a href="{% url "registro" %}">Registro</a>
                 </button>
             </li>
             <li class="nav-item boton_cerrarsesion">
