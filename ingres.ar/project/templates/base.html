@@ -21,7 +21,7 @@
 <!-- Header base , se muestra siempre  -->
 
     <header class="navbar navbar-expand-lg  my-nav justify-content-between align-items-center">   
-        <a class="navbar-brand h-10" href="http://127.0.0.1:8000/">
+        <a class="navbar-brand h-10" href="{% url "home" %}">
             <!-- Retorna al home con el icono de IngresAR -->
             <img class="icono_1" src="{% static 'base/icons/logo1.svg' %}" alt="error_img">
         </a>
@@ -33,7 +33,7 @@
                     Ingreso
                 </button>
                 {% if error %}
-                    <p style="color: red;">{{ error }}</p>
+                    <p class="alert alert-danger" style="color: red;">{{ error }}</p>
                 {% endif%}
                 <form class="dropdown-menu form_1" action="{% url "login_usuario" %}" method="POST">
                     <div class="form-group">
@@ -63,7 +63,7 @@
             </li>
             <li class="nav-item boton_cerrarsesion">
                 <button class="btn btn-secondary boton_cs_set">
-                    <a href="#">Cerrar sesion</a>
+                    <a href="{% url "logout_usuario" %}">Cerrar sesion</a>
                 </button>
             </li>
         </ul>
@@ -83,7 +83,7 @@
         <a  href=""> <img class="iconos" src="{% static 'base/icons/facebook.png' %}" alt=""> </a>
         <a  href=""> <img class="iconos" src="{% static 'base/icons/gorjeo.png' %}" alt=""> </a>
         <a  href=""> <img class="iconos" src="{% static 'base/icons/instagram.png' %}" alt=""> </a>
-        <a  style="color: white; margin-left: 20px;" href="http://127.0.0.1:8000/copyrights"> Copyright® Informatorio 2020 </a>
+        <a  style="color: white; margin-left: 20px;" href="{% url "copyrights" %}"> Copyright® Informatorio 2020 </a>
     </div>
 </footer>
 
