@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'apps.usuarios',
     'apps.Biblioteca',
     'apps.Home',
-    'apps.Registro',
     'apps.Autoevaluacion',
 ]
 

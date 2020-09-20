@@ -38,7 +38,7 @@
                 <form class="dropdown-menu form_1" action="{% url "login_usuario" %}" method="POST">
                     <div class="form-group">
                         <label for="exampleDropdownFormEmail2">Usuario</label>
-                        <input type="text" class="form-control" name="username" id="exampleDropdownFormEmail2" placeholder="email@ejemplo.com">
+                        <input type="text" class="form-control" name="username" id="exampleDropdownFormEmail2">
                     </div>
                     <div class="form-group">
                         <label for="exampleDropdownFormPassword2">Contraseña</label>
@@ -58,7 +58,7 @@
             </li>
             <li class="nav-item boton_registro">
                 <button class="btn btn-secondary boton_reg_set">
-                    <a href="{% url "registro" %}">Registro</a>
+                    <a href="{% url "registro_usuario" %}">Registro</a>
                 </button>
             </li>
             <li class="nav-item boton_cerrarsesion">

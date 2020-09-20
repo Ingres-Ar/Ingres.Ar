@@ -16,7 +16,8 @@
           <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
         </div>
     </div>
-    <div class="form-group">
+
+    <!-- <div class="form-group">
             <label for="">Filtrar por: </label>
             <a href="#" class="badge badge-primary">Primary</a> 
             <a href="#" class="badge badge-primary">Primary</a> 
@@ -24,17 +25,23 @@
             <a href="#" class="badge badge-primary">Primary</a> 
             <a href="#" class="badge badge-primary">Primary</a> 
             <a href="#" class="badge badge-primary">Primary</a> 
-    </div>
+    </div> -->
 
     <div class="form-group">
         <div class="#"> 
             <label for="#">Resultados de busqueda:</label>
         </div>
-        <div class="busqueda"> 
-            {{ colegios }}
-        </div>
 
-</div>
+        {% for item in colegios_clave %}
+          <div class="busqueda" style="padding: 10px; height: 200px; margin-top: 10px;"> 
+            <!--  || colegios_clave || mostramos el objeto -->
+                <span> CUE: {{ item.cue }}</span>
+                <h2>Nombre:<a href="">{{ item.nombre }}</a></h2>
+                <span>Sector: {{ item.sector|linebreaksbr }}</span><br>        
+                <span>Escuela: {{ item.nro_escuela|linebreaksbr }}</span>        
+          </div>
+        {% endfor %}    
+     </div>
 
 <!--       <div class="form-group">
             <label for="">Materias:</label>
