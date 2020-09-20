@@ -32,10 +32,10 @@
             <label for="#">Resultados de busqueda:</label>
         </div>
 
-        {% for item in colegios_clave %}
+        {% for item in context%}
           <div class="busqueda" style="padding: 10px; height: 200px; margin-top: 10px;"> 
             <!--  || colegios_clave || mostramos el objeto -->
-                <span> CUE: {{ item.cue }}</span>
+                <!-- <span> CUE: {{ item.cue }}</span> -->
                 <h2>Nombre:<a href="">{{ item.nombre }}</a></h2>
                 <span>Sector: {{ item.sector|linebreaksbr }}</span><br>        
                 <span>Escuela: {{ item.nro_escuela|linebreaksbr }}</span>        
@@ -43,22 +43,6 @@
         {% endfor %}    
      </div>
 
-<!--       <div class="form-group">
-            <label for="">Materias:</label>
-            <div class="contenedor-material"> 
-                <a class="link-material" href="#">Materia 1</a>
-            </div>
-            <div class="contenedor-material"> 
-                <a class="link-material" href="#">Materia 2</a>
-            </div>
-            <div class="contenedor-material"> 
-                <a class="link-material" href="#">Materia 3</a>
-            </div>
-            <div class="contenedor-material"> 
-                <a class="link-material" href="#">Materia 4</a>
-            </div>
-    </div>
-    -->
     </form>
 </div>
 {% endblock %}

@@ -5,4 +5,4 @@ from .models import *
 def establecimientos(request):
     colegios = Establecimiento.objects.all()
     context = {'colegios_clave': colegios }
-    return render(request,'../templates/establecimientos.html',context)
+    return render(request,'establecimientos.html',context)
