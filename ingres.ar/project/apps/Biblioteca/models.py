@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class Material(models.Model):
+    nombre = models.CharField(max_length=170)
+    enlace = models.CharField(max_length=500)

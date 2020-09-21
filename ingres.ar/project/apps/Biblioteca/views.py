@@ -5,3 +5,8 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def biblioteca(request):
     return render(request,'biblioteca.html')
+
+def material(request):
+    archivo = Material.objects.all()
+    context = {'materal_clave': archivo }
+    return render(request,'establecimientos.html',context)
