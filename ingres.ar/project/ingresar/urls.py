@@ -28,5 +28,3 @@ urlpatterns = [
     path('autoevaluacion/', include('apps.Autoevaluacion.urls')),
     path('usuario/',include('apps.usuarios.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
