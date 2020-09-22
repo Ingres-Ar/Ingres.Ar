@@ -14,7 +14,7 @@ def login_view(request):
         usuario = authenticate(request,username=username,password=password)
         if usuario:
             login(request,usuario)
-            return redirect('home')
+            return render(request,'home.html',{'bienvenida':request.POST·['username']})
         else:
             return render(request, 'home.html',{'error':'Algunos datos no son correctos!'})
             # return redirect('home')
@@ -29,12 +29,15 @@ def register_view(request):
         email  = request.POST['email']
         confirm_pass = request.POST['confirm_pass']
         if confirm_pass != password:
-            return render(request, 'registro.html') 
-        user = User.objects.create_user(usuario, email,password )
+            return render(request, 'registro.html',{'error_verpass':'Las contraseñas no coinciden.'})
+        else:
+            user = User.objects.create_user(usuario, email,password )
+            return render(request, 'home.html',{'exito_registro':'Tu usuario fue creado exitosamente'})
+
     return render(request, 'registro.html') 
 
 
 @login_required
 def logout_view(request):
-    # logout(request)
+    logout(request)
     return redirect('home')

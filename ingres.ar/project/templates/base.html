@@ -27,6 +27,7 @@
         </a>
         <!-- <span>Ingres.AR - Sistema de orientación y apoyo escolar.</span> -->
         <ul class="navbar-nav lista_1">
+            
             <li class="nav-item dropdown">
                 <button class="btn btn-secondary dropdown-toggle boton_ing_set" type="button" id="dropdownMenu2"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,16 +57,21 @@
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
                 </form>
             </li>
+            
+            {% if request.user.is_anonymous == True %}
             <li class="nav-item boton_registro">
                 <button class="btn btn-secondary boton_reg_set">
                     <a href="{% url "registro_usuario" %}">Registro</a>
                 </button>
             </li>
+            {% endif %}
+            {% if request.user.is_anonymous == False %}
             <li class="nav-item boton_cerrarsesion">
                 <button class="btn btn-secondary boton_cs_set">
                     <a href="{% url "logout_usuario" %}">Cerrar sesion</a>
                 </button>
             </li>
+            {% endif %}
         </ul>
     </header>
 

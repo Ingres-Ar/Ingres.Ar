@@ -5,8 +5,13 @@
 
 
 {% block content %}
-<div class="container"> 
+
     <form method="POST" action="{% url "registro_usuario" %}">
+      {% if error_verpass %}
+        <div class="container w-75"> 
+          <div class="text-center"> <p class="aler alert-danger">{{ error_verpass }}</p> </div>
+        </div>
+      {% endif %}
        
        <div class="form-group">
          <label for="exampleInputName">Usuario</label>
