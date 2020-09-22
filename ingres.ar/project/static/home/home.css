@@ -1,80 +1,27 @@
+/* estilos de home */
 
-* {
-    margin: 0;
-    padding: 0;
-}
-html,body{
-   margin:0px;
-   height:100%;
-}
-
-body {
-   background-color: white;   
-   min-height: 100vh;
+form {
+    width: 500px;
+    margin: 100px auto;
+    border: 1px solid #4499A0;
+    padding: 30px;
+    border-radius: 15px;
 }
 
-.my-nav{
-    background: linear-gradient(to bottom,#C1F1F5, #2CA4AF);
-    min-height: 4rem;
-}     
-
-.my-col {
-
-   height: 100%; 
-   width: 300px;
-   position: relative;
-   display: inline-block;
-   text-align: center;
-   /* cursor: pointer; */
+.contenedor-material {
+    border: 1px solid #4499A0;
+    border-radius: 15px;
+    background-color: #dae7e9;
+    margin-top: 10px;
 }
 
-.my-container {
-
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
+.label-biblio {
+    color: #4499A0;
 }
 
-.footer-cont {
-    width: 100%;
-    height: 40px;
-    background: linear-gradient(to right, #86A841 ,#B963F2 );
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-/* .centrado{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 45px;
-    
-} */
-
-.centrado {
-    font-size: 20px;
-    color: rgb(56, 56, 56);
-}
-
-.imagen_1 {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 20px;
-    
-}
-
-.icono_1 {
-    height: 50px;
-}
-
-.boton_registro , .boton_cs_set{
-    margin-left: 20px;
+.link-material {
+    margin-left: 15px;
+    color: #4499A0;
 }
 
 .boton_registro button a{
@@ -108,11 +55,11 @@ button.boton_reg_set ,button.boton_ing_set  , button.boton_cs_set{
     color: white;
 }
 
-
-
-
-
-
+.carousel {
+    width:  85%;
+    height: 85%;
+    margin: auto;
+}
 
 
 

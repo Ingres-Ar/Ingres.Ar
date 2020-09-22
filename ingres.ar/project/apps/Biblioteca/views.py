@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-
+@login_required
 def biblioteca(request):
-    return render(request,'../templates/biblioteca.html')
+    return render(request,'biblioteca.html')

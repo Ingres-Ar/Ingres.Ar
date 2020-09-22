@@ -1,6 +1,8 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 
 def establecimientos(request):
-    return render(request,'../templates/establecimientos.html')
+    colegios = Establecimiento.objects.all()
+    context = {'colegios_clave': colegios }
+    return render(request,'establecimientos.html',context)
