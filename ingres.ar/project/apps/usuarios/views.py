@@ -36,5 +36,13 @@ def register_view(request):
 
 @login_required
 def logout_view(request):
-    # logout(request)
+    logout(request)
     return redirect('home')
+
+""" 
+from django.shortcuts import HttpResponseRedirect
+
+def logoutUser(request):
+   logout(request)
+   return HttpResponseRedirect('/loginpage/') """
+

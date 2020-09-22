@@ -21,57 +21,74 @@
 <!-- Header base , se muestra siempre  -->
 
     <header class="navbar navbar-expand-lg  my-nav justify-content-between align-items-center">   
-        <a class="navbar-brand h-10" href="{% url "home" %}">
+        <a class="navbar-brand h-10" href="{% url 'home' %}">
             <!-- Retorna al home con el icono de IngresAR -->
             <img class="icono_1" src="{% static 'base/icons/logo1.svg' %}" alt="error_img">
         </a>
-        <!-- <span>Ingres.AR - Sistema de orientación y apoyo escolar.</span> -->
+    
         <ul class="navbar-nav lista_1">
-            <li class="nav-item dropdown">
-                <button class="btn btn-secondary dropdown-toggle boton_ing_set" type="button" id="dropdownMenu2"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Ingreso
-                </button>
-                {% if error %}
-                    <p class="alert alert-danger" style="color: red;">{{ error }}</p>
-                {% endif%}
-                <form class="dropdown-menu form_1" action="{% url "login_usuario" %}" method="POST">
-                    <div class="form-group">
-                        <label for="exampleDropdownFormEmail2">Usuario</label>
-                        <input type="text" class="form-control" name="username" id="exampleDropdownFormEmail2">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleDropdownFormPassword2">Contraseña</label>
-                        <input type="password" name= "password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                            <label class="form-check-label" for="dropdownCheck2">
-                                Recuerdame
-                            </label>
-                        </div>
-                    </div>
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
-                </form>
-            </li>
-            <li class="nav-item boton_registro">
-                <button class="btn btn-secondary boton_reg_set">
-                    <a href="{% url "registro_usuario" %}">Registro</a>
-                </button>
+        {% if user.is_authenticated %}
+
+            <li class="nav-item boton_cerrarsesion">
+                <div class="btn btn-secondary" style="background-color: #86A841; border: 1px solid transparent; cursor: initial">
+                    <span> Bienvenido: {{  user.get_username }} </span>
+                </div>
             </li>
             <li class="nav-item boton_cerrarsesion">
                 <button class="btn btn-secondary boton_cs_set">
-                    <a href="{% url "logout_usuario" %}">Cerrar sesion</a>
+                    <a href="{% url 'logout_usuario' %}">Cerrar sesion</a>
                 </button>
             </li>
+            
+             {% else %} 
+                  {% if error %}
+                  <li class="nav-item boton_registro">
+                    <div class="btn btn-secondary" style="color: white; margin-right: 10px; 
+                    background-color: orangered; border: 1px solid transparent; cursor: initial">
+                        <span>{{ error }}</span>
+                  </div>
+                  </li>
+                  {% endif%}  
+                  <li class="nav-item dropdown">    
+                         <button class="btn btn-secondary dropdown-toggle boton_ing_set" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ingreso </button>
+                         <form class="dropdown-menu form_1" action="{% url 'login_usuario' %}" method="POST">
+                             {% csrf_token %}
+                             <div class="form-group">
+                                 <label for="exampleDropdownFormEmail2">Usuario</label>
+                                 <input type="text" class="form-control" name="username" id="exampleDropdownFormEmail2">
+                             </div>
+                             <div class="form-group">
+                                 <label for="exampleDropdownFormPassword2">Contraseña</label>
+                                 <input type="password" name= "password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
+                             </div>
+                             <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+                         </form>
+                      </li>
+                      <li class="nav-item boton_registro">
+                          <button class="btn btn-secondary boton_reg_set">
+                              <a href="{% url 'registro_usuario' %}">Registro</a>
+                          </button>
+                      </li>
+        {% endif %}
+
+
+        
         </ul>
     </header>
+
+    {% if user.is_authenticated %}
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+           <strong>Hola {{ user.get_username }}</strong> Bienvenido/a al Proyecto IngresAr !
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+       </div>
+    {% endif %}
 
     {% block content %} 
     <!-- contenido dinamico de cada pantalla  -->
     <h1>Contenido dinamico Plantilla Base , nada por aqui </h1>
+    
     {% endblock %}
 
 <!-- Footer base , se muestra siempre  -->
@@ -83,11 +100,11 @@
         <a  href=""> <img class="iconos" src="{% static 'base/icons/facebook.png' %}" alt=""> </a>
         <a  href=""> <img class="iconos" src="{% static 'base/icons/gorjeo.png' %}" alt=""> </a>
         <a  href=""> <img class="iconos" src="{% static 'base/icons/instagram.png' %}" alt=""> </a>
-        <a  style="color: white; margin-left: 20px;" href="{% url "copyrights" %}"> Copyright® Informatorio 2020 </a>
+        <a  style="color: white; margin-left: 20px;" href="{% url 'copyrights' %}"> Copyright® Informatorio 2020 </a>
     </div>
 </footer>
 
-
+<script src="{% static 'reload.js' %}"></script>   
 <!-- JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

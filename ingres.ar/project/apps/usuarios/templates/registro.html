@@ -6,27 +6,35 @@
 
 {% block content %}
 <div class="container"> 
-    <form method="POST" action="{% url "registro_usuario" %}">
-       
-       <div class="form-group">
-         <label for="exampleInputName">Usuario</label>
-         <input type="text" class="form-control"name="username" id="exampleInputName">
+  {% if user.is_active %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+           <strong>Hola {{ user.get_username }}</strong> Bienvenido/a al Proyecto IngresAr !
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
        </div>
-       <div class="form-group">
-         <label for="exampleInputPassword1">Contraseña</label>
-         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-       </div>
-       <div class="form-group">
-         <label for="exampleInputPassword1">Confirmar la contraseña</label>
-         <input type="password" name="confirm_pass" class="form-control" id="exampleInputPassword1">
-       </div>
-       <div class="form-group">
-        <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-      </div>
-      {% csrf_token %} <!--Genera un token para validar que los datos enviados sean de este form, es obligatorio-->
-       <button type="submit" class="btn btn-primary">Registrarse</button>
-   </form>
+  {% else %}
+            <form method="POST" action="{% url 'registro_usuario' %}">
+               {% csrf_token %} <!--Genera un token para validar que los datos enviados sean de este form, es obligatorio-->
+               <div class="form-group">
+                 <label for="exampleInputName">Usuario</label>
+                 <input type="text" class="form-control"name="username" id="exampleInputName">
+               </div>
+               <div class="form-group">
+                 <label for="exampleInputPassword1">Contraseña</label>
+                 <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+               </div>
+               <div class="form-group">
+                 <label for="exampleInputPassword1">Confirmar la contraseña</label>
+                 <input type="password" name="confirm_pass" class="form-control" id="exampleInputPassword1">
+               </div>
+               <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+               <button type="submit" class="btn btn-primary">Registrarse</button>
+           </form>
+  {% endif %}     
 </div>
 
 {% endblock %}
