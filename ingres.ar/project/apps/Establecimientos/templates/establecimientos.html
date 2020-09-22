@@ -6,14 +6,15 @@
 
 {% block content %}
 <div class="container"> 
-    <form>
+    <form action="{% url "buscar_colegios" %}" method="POST">
+      {% csrf_token %}
     <div class="form-group">
         <label class="label-biblio">Buscar Colegios</label>
     </div>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Busque su colegio aqui" aria-label="buscar-colegios" aria-describedby="button-addon2">
+        <input type="text" class="form-control" name="busqueda" placeholder="Busque su colegio aqui" aria-label="buscar-colegios" aria-describedby="button-addon2">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
         </div>
     </div>
 
@@ -32,7 +33,7 @@
             <label for="#">Resultados de busqueda:</label>
         </div>
 
-        {% for item in context%}
+        {% for item in resultado%}
           <div class="busqueda" style="padding: 10px; height: 200px; margin-top: 10px;"> 
             <!--  || colegios_clave || mostramos el objeto -->
                 <!-- <span> CUE: {{ item.cue }}</span> -->
