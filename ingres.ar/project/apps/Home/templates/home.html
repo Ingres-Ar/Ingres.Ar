@@ -43,19 +43,50 @@
       </div>
     </section>
 
-    <div class="my-container">
+    <div class="my-container " >
       <div class="my-col my-col-1">
         <a href="{% url "establecimientos" %}"> <img class="imagen_1"
             src="{% static 'home/img/colegiosgif.gif' %}" alt=""> </a>
       </div>
+      {% if request.user.is_anonymous %}
       <div class="my-col my-col-2">
-        <a href="{% url "biblioteca" %}"><img class="imagen_1"
-            src="{% static 'home/img/bibliotecagif.gif' %}" alt=""> </a>
+        <a href="#"><img class="imagen_1"
+            src="{% static 'home/img/bibliotecagif.gif' %}" alt=""
+            data-toggle="modal" data-target="#exampleModal"> </a>
+      </div>
+      {% else %}
+        <div class="my-col my-col-2">
+          <a href="{% url "biblioteca" %}"><img class="imagen_1"
+              src="{% static 'home/img/bibliotecagif.gif' %}" alt=""> </a>
+        </div>
+      {% endif %}
 
-      </div>
-      <div class="my-col my-col-3">
-        <a href="{% url "autoevaluacion" %}"> <img class="imagen_1"
-            src="{% static 'home/img/autoevaluacion.gif' %}" alt=""> </a>
-      </div>
+      {% if request.user.is_anonymous %}
+        <div class="my-col my-col-3">
+          <a href="#"> <img class="imagen_1"
+              src="{% static 'home/img/autoevaluacion.gif' %}" alt=""
+              data-toggle="modal" data-target="#exampleModal"> </a>
+        </div>
+      {% else %}
+        <div class="my-col my-col-3">
+          <a href="{% url "autoevaluacion" %}"> <img class="imagen_1"
+              src="{% static 'home/img/autoevaluacion.gif' %}" alt=""> </a>
+        </div>
+      {% endif %}
+      
     </div>
+    <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p class="alert alert-danger">DEBES ESTAR <a href="{% url "registro_usuario" %}">REGISTRADO</a>
+                 PARA INGRESAR A ESTA SECCIÓN</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     {% endblock %}
