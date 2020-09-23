@@ -9,7 +9,10 @@ def establecimientos(request):
 
 def filtro(request):
     if request.method == 'POST':
-        query = Establecimiento.objects.filter(nombre__icontains=request.POST['busqueda'])
-        resultado = {'resultado': query}
-        return render(request,'establecimientos.html',resultado)
+        if request.POST['busqueda'] != '':
+            query = Establecimiento.objects.filter(nombre__icontains=request.POST['busqueda'])
+            resultado = {'resultado': query}
+            return render(request,'establecimientos.html',resultado)
+        else:
+           return render(request,'establecimientos.html',{'error_busqueda':'Debes ingresar una palabra clave para buscar'}) 
     return redirect('establecimientos')
