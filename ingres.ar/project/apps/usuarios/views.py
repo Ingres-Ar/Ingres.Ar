@@ -30,8 +30,11 @@ def register_view(request):
             password = request.POST['password']
             email  = request.POST['email']
             confirm_pass = request.POST['confirm_pass']
-            if confirm_pass != password and password != '':
+            if confirm_pass != password:
                 return render(request, 'registro.html',{'mensaje':'Las contraseñas no coinciden y son obligatorias.'})
+            elif password == '':
+                return render(request, 'registro.html',{'mensaje':'Debe ingresar un password'})
+
             else:
                 user = User.objects.create_user(usuario, email,password )
                 return render(request, 'home.html',{'exito_registro':'Tu usuario fue creado exitosamente'})
