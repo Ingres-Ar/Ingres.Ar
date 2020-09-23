@@ -12,6 +12,8 @@
 ------------------------------------------------------------------------------------------------------------
 
 -- Se subieron cambios a las imagenes del carousel al deploy 
+-- Se subio la configuracion de busqueda y el mensaje exitoso de registro 
+-- Cambios a colores de popups de usuario visitante y usuario con sesion iniciada
 
 
 
