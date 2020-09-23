@@ -7,9 +7,9 @@
 {% block content %}
 
     <form method="POST" action="{% url "registro_usuario" %}">
-      {% if error_verpass %}
+      {% if mensaje %}
         <div class="container w-75"> 
-          <div class="text-center"> <p class="aler alert-danger">{{ error_verpass }}</p> </div>
+          <div class="text-center"> <p class="aler alert-danger">{{ mensaje }}</p> </div>
         </div>
       {% endif %}
        

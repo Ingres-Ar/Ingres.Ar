@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
-# from . import models
+from django.db import IntegrityError
 
 # Create your views here.
 from django.contrib.auth import authenticate, login,logout
@@ -22,17 +22,24 @@ def login_view(request):
     # return render(request, '../../Biblioteca/templates/biblioteca.html')  
 
 def register_view(request):
-    # import pdb; pdb.set_trace()
-    if request.method == 'POST':
-        usuario = request.POST['username']
-        password = request.POST['password']
-        email  = request.POST['email']
-        confirm_pass = request.POST['confirm_pass']
-        if confirm_pass != password:
-            return render(request, 'registro.html',{'error_verpass':'Las contraseñas no coinciden.'})
-        else:
-            user = User.objects.create_user(usuario, email,password )
-            return render(request, 'home.html',{'exito_registro':'Tu usuario fue creado exitosamente'})
+
+    try:
+        # import pdb; pdb.set_trace()
+        if request.method == 'POST':
+            usuario = request.POST['username']
+            password = request.POST['password']
+            email  = request.POST['email']
+            confirm_pass = request.POST['confirm_pass']
+            if confirm_pass != password and password != '':
+                return render(request, 'registro.html',{'mensaje':'Las contraseñas no coinciden y son obligatorias.'})
+            else:
+                user = User.objects.create_user(usuario, email,password )
+                return render(request, 'home.html',{'exito_registro':'Tu usuario fue creado exitosamente'})
+    except ValueError:
+        return render(request, 'registro.html',{'mensaje':'Usuario no puede estar vacío'})
+    except IntegrityError: 
+        return render(request, 'registro.html',{'mensaje': 'El usuario ya está en uso'})
+
 
     return render(request, 'registro.html') 
 
