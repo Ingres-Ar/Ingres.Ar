@@ -3,7 +3,6 @@
 {% block estilos %} <link rel="stylesheet" href="{% static 'establecimientos/establecimientos.css' %}"> {% endblock %}
 {% block title %} <title> Colegios </title> {% endblock %}
 
-
 {% block content %}
 <div class="container"> 
     <form action="{% url 'buscar_colegios' %}" method="POST">
@@ -17,16 +16,6 @@
         <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
       </div>
   </div>
-
-    <!-- <div class="form-group">
-            <label for="">Filtrar por: </label>
-            <a href="#" class="badge badge-primary">Primary</a> 
-            <a href="#" class="badge badge-primary">Primary</a> 
-            <a href="#" class="badge badge-primary">Primary</a> 
-            <a href="#" class="badge badge-primary">Primary</a> 
-            <a href="#" class="badge badge-primary">Primary</a> 
-            <a href="#" class="badge badge-primary">Primary</a> 
-    </div> -->
 
     <div class="form-group">
         {% if error_busqueda %}
