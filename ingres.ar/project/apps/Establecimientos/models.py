@@ -3,8 +3,8 @@ from django.db import models
 class Establecimiento(models.Model):
     cue = models.CharField(max_length=100)
     sector = models.CharField(max_length=100)
-    nombre = models.CharField(max_length=50)
-    nro_escuela = models.IntegerField()
+    nombre = models.CharField(max_length=150)
+    nro_escuela = models.IntegerField(null=True)
 
 class Localizacion(models.Model):
     anexo = models.CharField(max_length=50)

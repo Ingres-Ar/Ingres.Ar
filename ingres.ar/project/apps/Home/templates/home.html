@@ -64,6 +64,11 @@
                   </button>
               </div>
            {% endif %} 
+           {% if exito_registro %}
+               <div class="container w-50">
+                 <p class="alert alert-success text-center">{{ exito_registro }}</p>
+               </div>
+           {% endif %}
            <section>
             <br>
             <div id="carouselhome" class="carousel slide" data-ride="carousel">
