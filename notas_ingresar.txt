@@ -3,9 +3,11 @@
 -------------------------------- Cambios por hacer: ---------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 (HECHO)
--- Cuando alguien se registra hay que redireccionarlo con la sesion iniciada 
 -- La busqueda deberia mostrar resultados con el boton solo si uno escribe palabras clave en el input , en cambio el boton de busqueda al hacer click devuelve todos los registros de establecimientos cargados. 
 --  El registro registra a cualquier user solo con el nombre. (corregir)
+
+(VER)
+-- Cuando alguien se registra hay que redireccionarlo con la sesion iniciada 
 
 (POR HACER)
 -- Paginacion de busqueda e informacion 
