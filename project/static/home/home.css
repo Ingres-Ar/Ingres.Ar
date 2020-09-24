@@ -1,0 +1,67 @@
+/* estilos de home */
+
+form {
+    width: 500px;
+    margin: 100px auto;
+    border: 1px solid #4499A0;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contenedor-material {
+    border: 1px solid #4499A0;
+    border-radius: 15px;
+    background-color: #dae7e9;
+    margin-top: 10px;
+}
+
+.label-biblio {
+    color: #4499A0;
+}
+
+.link-material {
+    margin-left: 15px;
+    color: #4499A0;
+}
+
+.boton_registro button a{
+    color: white;
+}
+
+.boton_cerrarsesion button a{
+    color: white;
+}
+
+form.form_1 {
+    padding: 20px;
+    width: 250px;
+}
+
+.lista_1 {
+    margin-right: 50px;
+}
+
+button.boton_reg_set ,button.boton_ing_set  , button.boton_cs_set{
+    border-radius: 0 10px 0 10px;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.footer-cont span {
+    color: white;
+}
+
+.carousel {
+    width:  85%;
+    height: 85%;
+    margin: auto;
+}
+
+
+
+
+

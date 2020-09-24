@@ -1,0 +1,41 @@
+/* estilos de biblioteca */
+
+form {
+    width: 500px;
+    margin: 100px auto;
+    border: 1px solid #4499A0;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contenedor-material {
+    border: 1px solid #4499A0;
+    border-radius: 15px;
+    background-color: #dae7e9;
+    margin-top: 10px;
+}
+
+.label-biblio {
+    color: #4499A0;
+}
+
+.link-material {
+    margin-left: 15px;
+    color: #4499A0;
+}
+
+.busqueda {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #4499A0;
+    border-radius: 15px;
+    box-shadow: 3px 3px 2px  rgba(0, 0, 0, 0.514);
+    overflow: auto;
+}
+
+
+
+
+
+
