@@ -25,9 +25,9 @@ def filtro(request):
             return render(request,'establecimientos.html',resultado)
         else:
            return render(request,'establecimientos.html',{'error_busqueda':'Debes ingresar una palabra clave para buscar'}) 
+
     #  return redirect('establecimientos')
     
-
 def listing(request):
     
     lista = Establecimiento.objects.all()
@@ -39,10 +39,4 @@ def listing(request):
 
 def info_establecimientos(request):
     pass
-
-
-
-
-
-
 
