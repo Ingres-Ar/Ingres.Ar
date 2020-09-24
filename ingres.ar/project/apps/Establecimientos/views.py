@@ -16,11 +16,3 @@ def filtro(request):
         else:
            return render(request,'establecimientos.html',{'error_busqueda':'Debes ingresar una palabra clave para buscar'}) 
     return redirect('establecimientos')
-
-
-""" def busqueda(request):
-    if request.method == 'GET':
-        busqueda = request.GET['Establecimiento.objects.filter()']
-        context = {'colegios_clave': colegios }
-        return render(request, 'establecimientos.html',{'busqueda':'busqueda'})
-            # return redirect('home') """
