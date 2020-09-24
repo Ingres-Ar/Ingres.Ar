@@ -48,7 +48,38 @@
      </div>
 
     </form>
+    <div class="container">
+      <div class="form-group textext-center">
+        {% for est in lista_colegios %}
+          <ul>
+           <li> {{ est.nombre }}<br></li>
+          </ul>
+        {% endfor %}
+      </div>
+   
+     <div class="pagination">
+       <span class="step-links">
+           {% if lista_colegios.has_previous %}
+               <a href="?page=1">&laquo; Primera Pág.</a>
+               <a href="?page={{ lista_colegios.previous_page_number }}">Anterior</a>
+           {% endif %}
+   
+           <span class="current">
+               Página {{ lista_colegios.number }} de {{ lista_colegios.paginator.num_pages }}.
+           </span>
+   
+           {% if lista_colegios.has_next %}
+               <a href="?page={{ lista_colegios.next_page_number }}">Siguiente</a>
+               <a href="?page={{ lista_colegios.paginator.num_pages }}">Final &raquo;</a>
+           {% endif %}
+       </span>
+     </div>
+    </div>
+
 </div>
+
+ 
+    
 {% endblock %}
 
 
