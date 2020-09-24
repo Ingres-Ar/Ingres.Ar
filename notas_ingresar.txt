@@ -11,6 +11,9 @@
 
 (POR HACER)
 -- Paginacion de busqueda e informacion 
+-- Estilos de paginacion 
+-- Pantalla de informacion de Establecimientos
+
 -------------------------------- Cambios realizados: ----------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
