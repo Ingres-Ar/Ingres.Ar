@@ -11,23 +11,29 @@
         <label class="label-biblio">Contenido de Biblioteca</label>
     </div>
     <div class="form-group">
-            <label for="">Materiales de Estudio: </label>
+        <label for="">Materiales de Estudio: </label>
+        {% for item in archivos_clave %}
             <div class="contenedor-material"> 
-                <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1ZvzsDVcey3rrcW8K_huvYqrv1vfN70F0/view?usp=sharing" download="Programa_lengua.pdf">Programa de Lengua</a>
+              <a class="link-material" target="_blank" href="{{ item.link }}" download="#">{{ item.nombre }}</a>
             </div>
-            <div class="contenedor-material"> 
-                <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1hU20rjLJdW81n381ZISIB0R2mt_6ezz7/view?usp=sharing" download="Programa_matematicas.pdf">Programa de Matematicas</a>
-            </div>
-            <div class="contenedor-material"> 
-                <a class="link-material" target="_blank" href="https://drive.google.com/file/d/13iAUBT9N5MDvAOiVUxmSMRE6zspdYAJb/view?usp=sharing">Material Literario para la autoevaluación de Lengua</a>
-            </div>
-            <div class="contenedor-material"> 
-                <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1iwZdyhPRN5am4sDkqYS9gmMo9PbLH3Va/view"> Material de estudio para autoevaluacion de Matematicas </a>
-            </div>
-            
-            
+        {% endfor %}    
     </div>
 
+
+<!-- 
+    <label for="">Materiales de Estudio: </label>
+    <div class="contenedor-material"> 
+        <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1ZvzsDVcey3rrcW8K_huvYqrv1vfN70F0/view?usp=sharing" download="Programa_lengua.pdf">Programa de Lengua</a>
+    </div>
+    <div class="contenedor-material"> 
+        <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1hU20rjLJdW81n381ZISIB0R2mt_6ezz7/view?usp=sharing" download="Programa_matematicas.pdf">Programa de Matematicas</a>
+    </div>
+    <div class="contenedor-material"> 
+        <a class="link-material" target="_blank" href="https://drive.google.com/file/d/13iAUBT9N5MDvAOiVUxmSMRE6zspdYAJb/view?usp=sharing">Material Literario para la autoevaluación de Lengua</a>
+    </div>
+    <div class="contenedor-material"> 
+        <a class="link-material" target="_blank" href="https://drive.google.com/file/d/1iwZdyhPRN5am4sDkqYS9gmMo9PbLH3Va/view"> Material de estudio para autoevaluacion de Matematicas </a>
+    </div>   -->  
 <!--       <div class="form-group">
             <label for="">Materias:</label>
             <div class="contenedor-material"> 

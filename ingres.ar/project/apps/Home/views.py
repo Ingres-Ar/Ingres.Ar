@@ -3,4 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request,'../templates/home.html')
+    context = {'error_1': 'Registrate para acceder a la Biblioteca',
+    'error_2': 'Registrate para acceder a la Autoevaluacion',
+       }
+    return render(request,'home.html',context)

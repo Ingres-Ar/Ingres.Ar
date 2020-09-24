@@ -8,15 +8,25 @@ from django.contrib.auth.models import User
 
 class Perfil(models.Model):
     '''usuario es la relacion entre la table Users y Perfil'''
+    # Modelo Perfil de Juan
     usuario = models.OneToOneField(User,on_delete= models.CASCADE)
+    telefono = models.CharField(max_length=20,blank=True)
+    fecha_nacimiento= models.DateField(null=True)
+    foto = models.ImageField(upload_to='media/',blank=True)
+    creado = models.DateTimeField(auto_now_add=True)
+    modificado = models.DateTimeField(auto_now=True)
+   
+   # Modelo Perfil original 
+    """  usuario = models.OneToOneField(User,on_delete= models.CASCADE)
     nombre = models.CharField(max_length=30,blank=True)
     apellido = models.CharField(max_length=20,blank=True)
     telefono = models.CharField(max_length=20,blank=True)
     fecha_nacimiento= models.DateField(null=True)
     foto = models.ImageField(upload_to='../media',blank=True)
     creado = models.DateTimeField(auto_now_add=True)
-    modificado = models.DateTimeField(auto_now=True)
+    modificado = models.DateTimeField(auto_now=True) """
 
+    
 
 '''solo redefino el método str para observar en shell el nombre de usuario'''
 def __str__(self):

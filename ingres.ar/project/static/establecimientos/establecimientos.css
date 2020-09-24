@@ -31,6 +31,7 @@ form {
     border: 1px solid #4499A0;
     border-radius: 15px;
     box-shadow: 3px 3px 2px  rgba(0, 0, 0, 0.514);
+    overflow: auto;
 }
 
 

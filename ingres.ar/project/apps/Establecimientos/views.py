@@ -6,3 +6,21 @@ def establecimientos(request):
     colegios = Establecimiento.objects.all()
     context = {'colegios_clave': colegios }
     return render(request,'establecimientos.html',context)
+
+def filtro(request):
+    if request.method == 'POST':
+        if request.POST['busqueda'] != '':
+            query = Establecimiento.objects.filter(nombre__icontains=request.POST['busqueda'])
+            resultado = {'resultado': query}
+            return render(request,'establecimientos.html',resultado)
+        else:
+           return render(request,'establecimientos.html',{'error_busqueda':'Debes ingresar una palabra clave para buscar'}) 
+    return redirect('establecimientos')
+
+
+""" def busqueda(request):
+    if request.method == 'GET':
+        busqueda = request.GET['Establecimiento.objects.filter()']
+        context = {'colegios_clave': colegios }
+        return render(request, 'establecimientos.html',{'busqueda':'busqueda'})
+            # return redirect('home') """

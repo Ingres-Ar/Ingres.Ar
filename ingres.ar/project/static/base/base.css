@@ -74,6 +74,14 @@ body {
     color: white;
 }
 
+.boton_cerrarsesion button span{
+    color: white;
+}
+
+.boton_user {
+    color: tomato;
+}
+
 form.form_1 {
     padding: 20px;
     width: 250px;
