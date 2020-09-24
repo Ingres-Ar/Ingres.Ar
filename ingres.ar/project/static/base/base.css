@@ -110,6 +110,9 @@ footer div a:hover {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.49);
 }
 
+.botonera{
+    display: flex;
+}
 
 /* colores de degrade */
 /* #C1F1F5 */
