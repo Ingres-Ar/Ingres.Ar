@@ -104,18 +104,20 @@
             </div>
           </section>
       
-          <div class="my-container">
-            <div class="my-col my-col-1">
-              <a href="{% url 'establecimientos' %}"> <img class="imagen_1"
-                src="{% static 'home/img/colegiosgif.gif' %}" alt=""> </a>
+          <div class="container">
+            <div class="row mb-3">
+              <div class="col-sm-4 themed-grid-col">
+                <a href="{% url 'establecimientos' %}"><img class="d-block w-100"
+                    src="{% static 'home/img/colegiosgif.gif' %}" alt=""> </a>
               </div>
-              <div class="my-col my-col-2">
-              <a href="{% url 'biblioteca' %}"><img class="imagen_1"
-                  src="{% static 'home/img/bibliotecagif.gif' %}" alt=""> </a>
-            </div>
-            <div class="my-col my-col-3">
-              <a href="{% url 'autoevaluacion' %}"> <img class="imagen_1"
-                  src="{% static 'home/img/autoevaluacion.gif' %}" alt=""> </a>
+              <div class="col-sm-4 themed-grid-col">
+                <a href="{% url 'biblioteca' %}"><img class="d-block w-100"
+                    src="{% static 'home/img/bibliotecagif.gif' %}" alt=""> </a>
+              </div>
+              <div class="col-sm-4 themed-grid-col">
+                <a href="{% url 'autoevaluacion' %}"><img class="d-block w-100"
+                    src="{% static 'home/img/autoevaluacion.gif' %}" alt=""> </a>
+              </div>
             </div>
           </div>
     {% endif %}              
