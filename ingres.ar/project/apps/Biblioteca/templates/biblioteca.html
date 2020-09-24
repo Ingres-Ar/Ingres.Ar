@@ -5,6 +5,9 @@
 
 
 {% block content %}
+<<<<<<< HEAD
+    <div class="container"> 
+=======
 <div class="container"> 
     <form>
     <div class="form-group">
@@ -18,7 +21,9 @@
             </div>
         {% endfor %}    
     </div>
+>>>>>>> 3a3db568bc364d097d4b79eee899a79c6afff60a
 
+<<<<<<< HEAD
 
 <!-- 
     <label for="">Materiales de Estudio: </label>
@@ -44,12 +49,31 @@
             </div>
             <div class="contenedor-material"> 
                 <a class="link-material" href="#">Materia 3</a>
+=======
+        <form>
+
+            <div class="form-group">
+                <label class="label-biblio">Contenido de Biblioteca</label>
+>>>>>>> 7d575f995544f4299c9bd6c32e225599840b9c2e
             </div>
-            <div class="contenedor-material"> 
-                <a class="link-material" href="#">Materia 4</a>
+
+            <div class="form-group"> 
+                <label for="">Materiales de Estudio: </label>
+                
+                {% for item in material_clave%}
+                    <p>
+                    {{ item.nombre }}
+                    {{ item.enlace }}
+                    </p>
+                    <!--
+                    <div class="contenedor-material">
+                        <a class="link-material" target="_blank" href="#" download="Programa_lengua.pdf">{{ item.nombre }}</a>
+                    </div>        
+                    -->
+                {% endfor %}
+            
             </div>
+            
+        </form>
     </div>
-    -->
-    </form>
-</div>
 {% endblock %}
