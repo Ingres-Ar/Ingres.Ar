@@ -20,6 +20,7 @@
 -- Se subio la DB con registros de Establecimientos al deploy 
 -- Se modifico la busqueda , ya no aparecen resultados sin ingresar palabras clave
 -- Se modifico el registro , no se puede registrar solo con el usuario, no se puede registrar sin colocar contraseña 
+-- Todos los cambios subidos a master y al deploy 
 
 
 
