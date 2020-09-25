@@ -1,21 +1,22 @@
                                  NOTAS DE PROYECTO
 
--------------------------------- Cambios por hacer: ---------------------------------------------------
--------------------------------------------------------------------------------------------------------
+-------------------------------- Cambios por hacer: ---------------------------------------------
+--------------------------------------------------------------------------------------------------
 (HECHO)
 -- La busqueda deberia mostrar resultados con el boton solo si uno escribe palabras clave en el input , en cambio el boton de busqueda al hacer click devuelve todos los registros de establecimientos cargados. 
 --  El registro registra a cualquier user solo con el nombre. (corregir)
+-- Paginacion de busqueda e informacion
+-- Estilos de paginacion
 
 (VER)
 -- Cuando alguien se registra hay que redireccionarlo con la sesion iniciada 
 
 (POR HACER)
--- Paginacion de busqueda e informacion 
--- Estilos de paginacion 
+
 -- Pantalla de informacion de Establecimientos
 
--------------------------------- Cambios realizados: ----------------------------------------------
--------------------------------------------------------------------------------------------------------
+-------------------------------- Cambios realizados: --------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 -- Se subieron cambios a las imagenes del carousel al deploy 
 -- Se subio la configuracion de busqueda y el mensaje exitoso de registro 
@@ -24,7 +25,7 @@
 -- Se modifico la busqueda , ya no aparecen resultados sin ingresar palabras clave
 -- Se modifico el registro , no se puede registrar solo con el usuario, no se puede registrar sin colocar contraseña 
 -- Todos los cambios subidos a master y al deploy 
-
+-- Paginacion completada con estilos 
 
 
 
