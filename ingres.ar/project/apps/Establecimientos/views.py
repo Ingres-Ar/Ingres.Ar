@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.core.paginator import Paginator
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 
@@ -37,12 +38,16 @@ def listing(request):
     page_obj = paginator.get_page(page_number)
     return render(request, 'establecimientos.html', {'lista_colegios': page_obj})
 
-def info_establecimientos(request):
-    pass
+def info_e(request, pk):
+    est1 = get_object_or_404(Establecimiento, pk=pk)
+    return render(request, 'info_e.html', {'est1': est1})
 
-
-
-
+""" 
+est = Establecimiento.objects.get(pk=pk)
+    context = {
+        'est': est
+    }
+    return render(request, 'info_e.html',context) """
 
 
 

@@ -25,8 +25,10 @@ urlpatterns = [
     path('biblioteca/', include('apps.Biblioteca.urls')),
     # path('registro/', include('apps.Registro.urls')),
     path('establecimientos/', include('apps.Establecimientos.urls')),
+    #path('info_e/', include('apps.Establecimientos.urls')),
+    #path("<int:id>/", views.info_e, name="info_e"),
     path('autoevaluacion/', include('apps.Autoevaluacion.urls')),
     path('usuario/',include('apps.usuarios.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
+#path("<int:id>/", views.project_detail, name="project_detail"),

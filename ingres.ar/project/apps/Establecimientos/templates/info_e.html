@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block estilos %} <link rel="stylesheet" href="{% static 'establecimientos/establecimientos.css' %}"> {% endblock %}
+{% block title %} <title> Info Establecimientos </title> {% endblock %}
+
+
+{% block content %}
+
+<div class="container align-middle text-center contenedor_pag" style="width: 500px; border: 1px solid rgb(0, 60, 128); padding: 20px; border-radius: 15px; margin-top: 50px;"> 
+
+{% if est1.pk == 1 %}       
+        <h3> Informacion sobre colegio {{ est1.nombre }} </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatem, vero libero accusamus ipsa mollitia. Accusantium similique soluta quidem esse veritatis vero optio minima unde ratione? Praesentium, porro. Aspernatur, ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat quae magnam hic numquam, ipsa nisi architecto nesciunt deserunt perspiciatis cumque odio consequatur accusantium consectetur recusandae dignissimos voluptatum. Incidunt, temporibus!</p>
+        <span> {{ est1.sector }} </span>
+    
+{% endif %}
+
+{% if est1.pk == 2 %}       
+  
+        <h3> Informacion sobre colegio {{ est1.nombre }} </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatem, vero libero accusamus ipsa mollitia. Accusantium similique soluta quidem esse veritatis vero optio minima unde ratione? Praesentium, porro. Aspernatur, ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat quae magnam hic numquam, ipsa nisi architecto nesciunt deserunt perspiciatis cumque odio consequatur accusantium consectetur recusandae dignissimos voluptatum. Incidunt, temporibus!</p>
+        <span> {{ est1.sector }} </span>
+         
+{% endif %}
+
+{% if est1.pk == 3 %}       
+   
+        <h3> Informacion sobre colegio {{ est1.nombre }} </h3>
+        <p> Informacion sobre colegio 3 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, suscipit.
+        </p>
+        <span> {{ est1.sector }} </span>
+          
+{% endif %}
+
+</div>
+
+    
+{% endblock %}
