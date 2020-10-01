@@ -53,11 +53,13 @@
   </div>
   <div class="container align-middle text-center">
 
-      {% for est in lista_colegios %}
-        <ul class="list-group text-center ">
-         <li class="list-group-item"> {{ est.nombre }}<br></li>
-        </ul>
-      {% endfor %}
+    {% for est in lista_colegios %}
+      <ul class="list-group text-center ">
+           <a href="{% url "info_establecimientos" cue=22 %}">
+           <li class="list-group-item"> {{ est.nombre }}<br></li>
+        </a>
+      </ul>
+    {% endfor %}
 
   {% if lista_colegios %}
    <div class="pagination mb-5">

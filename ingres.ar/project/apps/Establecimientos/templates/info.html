@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block estilos %} <link rel="stylesheet" href="{% static 'establecimientos/info.css' %}"> {% endblock %}
+{% block title %} <title> Información - colegio.nombre </title> {% endblock %}
+
+
+{% block content %}
+
+    <h1>{{ mensaje }}</h1>
+
+    
+{% endblock %}

@@ -37,4 +37,7 @@ def listing(request):
     return render(request, 'establecimientos.html', {'lista_colegios': page_obj})
 
 def info_establecimientos(request):
-    pass
+    #import pdb; pdb.set_trace()
+    buscar = request.GET['cue']
+    resultado_busqueda = Establecimiento.objects.raw('SELECT * FROM Establecimientos')
+    return render(request,'info.html',{'mensaje':resultado_busqueda})

@@ -1,12 +1,13 @@
 from django.db import models
 
 class Establecimiento(models.Model):
-    cue = models.CharField(max_length=100)
-    sector = models.CharField(max_length=100)
+    id_establecimiento = models.CharField(max_length=100, primary_key=True)
+    cue = models.CharField(max_length=7,null=True)
+    sector = models.CharField(max_length=10)
     nombre = models.CharField(max_length=150)
-    nro_escuela = models.IntegerField(null=True)
 
 class Localizacion(models.Model):
+    id_localizacion = models.CharField(max_length=100, primary_key=True)
     anexo = models.CharField(max_length=50)
     telefono = models.CharField(max_length=12)
     email = models.EmailField()
@@ -15,11 +16,12 @@ class Localizacion(models.Model):
                                 on_delete=models.CASCADE)
 
 class Domicilio(models.Model):
+    id_domicilio = models.CharField(max_length=100,primary_key=True)
     calle = models.CharField(max_length=50)
     altura = models.IntegerField()
-    departamento = models.CharField(max_length=50)
-    localizacion = models.ForeignKey(Localizacion,
-                                    on_delete=models.CASCADE)
+    # departamento = models.CharField(max_length=50) se quita dpto
+    barrio = models.CharField(max_length=50)
+    id_localizacion = models.ManyToManyField(Localizacion)
 
 class Oferta(models.Model):
     modalidad = models.CharField(max_length=100)
