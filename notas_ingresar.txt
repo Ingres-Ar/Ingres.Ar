@@ -7,17 +7,19 @@
 --  El registro registra a cualquier user solo con el nombre. (corregir)
 -- Paginacion de busqueda e informacion
 -- Estilos de paginacion
+-- Pantalla de informacion de Establecimientos
 
 (VER)
 -- Cuando alguien se registra hay que redireccionarlo con la sesion iniciada 
 
 (POR HACER)
 
--- Pantalla de informacion de Establecimientos
+
 
 -------------------------------- Cambios realizados: --------------------------------------------
 --------------------------------------------------------------------------------------------------
-
+-- Proyecto Finalizado 
+-- Pantalla de informacion de Establecimientos con mapa terminada
 -- Se subieron cambios a las imagenes del carousel al deploy 
 -- Se subio la configuracion de busqueda y el mensaje exitoso de registro 
 -- Cambios a colores de popups de usuario visitante y usuario con sesion iniciada
