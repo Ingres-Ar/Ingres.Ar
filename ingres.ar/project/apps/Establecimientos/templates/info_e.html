@@ -6,31 +6,17 @@
 
 {% block content %}
 
-<div class="container align-middle text-center contenedor_pag" style="width: 500px; border: 1px solid rgb(0, 60, 128); padding: 20px; border-radius: 15px; margin-top: 50px;"> 
+<div class="container align-middle text-center contenedor_pag" style="width: 500px; border: 1px solid transparent; padding: 20px; border-radius: 15px; margin-top: 50px; background-color: #0b474d;
+color: white;"> 
 
-{% if est1.pk == 1 %}       
-        <h3> Informacion sobre colegio {{ est1.nombre }} </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatem, vero libero accusamus ipsa mollitia. Accusantium similique soluta quidem esse veritatis vero optio minima unde ratione? Praesentium, porro. Aspernatur, ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat quae magnam hic numquam, ipsa nisi architecto nesciunt deserunt perspiciatis cumque odio consequatur accusantium consectetur recusandae dignissimos voluptatum. Incidunt, temporibus!</p>
-        <span> {{ est1.sector }} </span>
-    
-{% endif %}
+{% if est1.pk %}       
 
-{% if est1.pk == 2 %}       
-  
-        <h3> Informacion sobre colegio {{ est1.nombre }} </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatem, vero libero accusamus ipsa mollitia. Accusantium similique soluta quidem esse veritatis vero optio minima unde ratione? Praesentium, porro. Aspernatur, ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat quae magnam hic numquam, ipsa nisi architecto nesciunt deserunt perspiciatis cumque odio consequatur accusantium consectetur recusandae dignissimos voluptatum. Incidunt, temporibus!</p>
-        <span> {{ est1.sector }} </span>
-         
-{% endif %}
+     <h3> Informacion sobre colegio {{ est1.nombre }} </h3>
+     <p> Informacion sobre colegio Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, iure cum? Nihil, perspiciatis consequatur! Minima, laborum? Cum voluptate quasi distinctio quia! Iure ipsa sint nihil fugit, aliquam numquam beatae eveniet!  </p>
+     <span> Sector: {{ est1.sector }} </span><br>
+     <span> Numero de colegio: {{ est1.nro_escuela }} </span>
+     <iframe style="margin: 30px 0;" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2975.417659441547!2d-58.993039846083846!3d-27.45140807695644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scolegio%20{{ est1.nombre }}%20!5e0!3m2!1ses-419!2sar!4v1601506042528!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
-{% if est1.pk == 3 %}       
-   
-        <h3> Informacion sobre colegio {{ est1.nombre }} </h3>
-        <p> Informacion sobre colegio 3 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, suscipit.
-        </p>
-        <span> {{ est1.sector }} </span>
-          
 {% endif %}
 
 </div>
