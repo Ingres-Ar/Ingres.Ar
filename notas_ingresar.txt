@@ -10,7 +10,7 @@
 -- Pantalla de informacion de Establecimientos
 
 (VER)
--- Cuando alguien se registra hay que redireccionarlo con la sesion iniciada 
+
 
 (POR HACER)
 
