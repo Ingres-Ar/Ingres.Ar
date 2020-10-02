@@ -6,13 +6,13 @@ de la Provincia del Chaco
 
 Integrantes del grupo:
 
-Jorge Miro
-Maximiliano Saito
-Leandro Zanoni
-Mauro Romero
-Juan Ledesma 
-Lucas Meneses
-Matias Miro
+Jorge Miro   
+Maximiliano Saito   
+Leandro Zanoni    
+Mauro Romero   
+Juan Ledesma      
+Lucas Meneses   
+Matias Miro   
 
 
 
